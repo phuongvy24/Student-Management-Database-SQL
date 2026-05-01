@@ -21,5 +21,6 @@ Relational database design project for a university student management system us
 - Nested queries
 
 ## Entity Relationship Diagram
-<img width="722" height="688" alt="Database_Diagram" src="https://github.com/user-attachments/assets/5d9bd5ba-7484-44f6-94e2-4089c41a6264" />
+<img width="896" height="794" alt="Database_Diagram" src="https://github.com/user-attachments/assets/bc69cbef-811f-4de8-8cc0-a7cab772d851" />
+
 
