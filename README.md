@@ -19,3 +19,7 @@ Relational database design project for a university student management system us
 - JOIN queries
 - Aggregate functions
 - Nested queries
+
+## Entity Relationship Diagram
+
+![ERD]("C:\Users\ACER\OneDrive\Hình ảnh\Ảnh chụp màn hình\Database_Diagram.png")
