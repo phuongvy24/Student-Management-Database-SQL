@@ -36,3 +36,37 @@ JOIN SinhVien s ON s.MaCN = c.MaCN
 GROUP BY n.MaN, n.TenN;
 ```
 
+---
+
+### 2. Students Who Did Not Register Courses in Semester 2 (2023-2024)
+**Purpose:** Identify students who did not register for any courses in Semester 2 of the academic year 2023–2024.  
+**Displayed Information:** Student ID, Student Name.
+
+#### SQL Query
+```sql
+SELECT MaSV, Ho, Ten
+FROM SinhVien sv
+WHERE sv.MaSV NOT IN (
+    SELECT dk.MaSV
+    FROM DKHP dk
+    JOIN LopHocPhan lhp ON lhp.MaHP = dk.MaHP
+    WHERE NamHoc = '2023-2024'
+      AND TenHocKy = 'HK2'
+);
+```
+
+---
+
+### 3. Lecturer Teaching Statistics
+**Purpose:** Count the number of courses taught by each lecturer.  
+**Displayed Information:** Lecturer ID, Lecturer Name, Number of Courses.
+
+#### SQL Query
+```sql
+SELECT gv.MaGV, Ho, Ten, COUNT(*) AS SLMonHoc
+FROM GiangDay gd
+JOIN GiangVien gv ON gv.MaGV = gd.MaGV
+GROUP BY gv.MaGV, Ho, Ten;
+```
+
+---
