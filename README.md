@@ -63,10 +63,10 @@ WHERE sv.MaSV NOT IN (
 
 #### SQL Query
 ```sql
-SELECT gv.MaGV, Ho, Ten, COUNT(*) AS SLMonHoc
-FROM GiangDay gd
-JOIN GiangVien gv ON gv.MaGV = gd.MaGV
-GROUP BY gv.MaGV, Ho, Ten;
+SELECT gv.MaGV, Ho, Ten, count(*) SLmonhoc
+FROM GiangDay gd, GiangVien gv
+WHERE gv.MaGV = gd.MaGV
+GROUP by gv.MaGV, Ho, Ten
 ```
 
 ---
